@@ -1,0 +1,309 @@
+<html lang="en"></html>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pessimistic Philosophy</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: #2a2a2a;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+        }
+        .navbar {
+            background-color: #1a1a1a;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+            font-family: 'Playfair Display', serif;
+        }
+        .hero {
+            background-image: url('img/1.webp');
+            background-size: cover;
+            height: 600px;
+            position: relative;
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        .btn-dark {
+            background-color: #1a1a1a;
+            border: none;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .card {
+            background-color: #333333;
+            border: none;
+            border-radius: 10px;
+        }
+        .card-title, .card-text {
+            color: #ffffff;
+        }
+        .author-image {
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 3rem 0;
+        }
+        .footer-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .footer-link {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .footer-link:hover {
+            color: #cccccc;
+        }
+        .social-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+        .subscribe-form {
+            display: flex;
+            margin-top: 1rem;
+        }
+        .subscribe-input {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        @media (min-width: 768px) {
+            .subscribe-form {
+                flex-direction: row;
+            }
+            .subscribe-input {
+                min-width: 160px; /* Further reduced width for desktop */
+                max-width: 180px; /* Adjusted max-width */
+            }
+            .subscribe-btn {
+                margin-right: 15px; /* Added margin to move button away from the edge */
+            }
+        }
+        @media (max-width: 767px) {
+            .subscribe-form {
+                flex-direction: column;
+            }
+            .subscribe-input {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+        .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Juventudes Pesimistas</a>
+            <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" id="home-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" id="articles-link" href="#">Articles</a></li>
+                    <li class="nav-item"><a class="nav-link" id="authors-link" href="#">Authors</a></li>
+                    <li class="nav-item"><a class="nav-link" id="discussion-title" href="#">Discussion</a></li>
+                    <li class="nav-item"><a class="nav-link" id="about-us-title" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="changeLanguage('en')">ENG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="changeLanguage('es')">ESP</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="hero">
+        <div class="hero-content">
+            <h1 id="hero-title">Pessimistic Philosophy</h1>
+            <p class="lead" id="hero-subtitle">Explore the darker side of human existence</p>
+            <button class="btn btn-dark" id="discover-btn">Discover More</button>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="section-title" id="articles-title">Articles</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title" id="article-1-title">The Futility of Existence</h5>
+                                <p class="card-text" id="article-1-text">An exploration of the meaninglessness of life and the absurdity of human endeavors.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title" id="article-2-title">Suffering as the Essence of Being</h5>
+                                <p class="card-text" id="article-2-text">A deep dive into the philosophical concept that pain and suffering are intrinsic to existence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2 class="section-title" id="authors-title">Authors</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Schopenhauer</h5>
+                        <p class="card-text" id="schopenhauer-text">The father of philosophical pessimism, known for his work "The World as Will and Representation".</p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Emil Cioran</h5>
+                        <p class="card-text" id="cioran-text">Romanian philosopher and essayist, famous for his dark, aphoristic meditations on human condition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <h2 class="section-title">Schopenhauer</h2>
+                <img alt="Portrait of Arthur Schopenhauer, a stern-looking man with short grey hair and a serious expression" class="img-fluid author-image" height="400" src="https://replicate.delivery/yhqm/xgE1A7IbHrafTqJh0sfHCYC10kCR02teAGeZvWLnfrA6HkRcC/out-0.png" width="300"/>
+            </div>
+            <div class="col-md-4">
+                <h2 class="section-title" id="key-concepts-title">Key Concepts</h2>
+                <img alt="A moody, dark landscape with a cloudy sky and a single bright spot, symbolizing pessimistic philosophy" class="img-fluid author-image" height="400" src="https://replicate.delivery/yhqm/V1eLEUJeqqqPzEXm7djHpPlz4WyfLkMmyMUmkH6MLVvfDyIOB/out-0.png" width="300"/>
+            </div>
+            <div class="col-md-4">
+                <h2 class="section-title" id="discussion-title">Discussion</h2>
+                <img alt="A portrait of a pensive philosopher gazing at a bright spot in a dark sky, symbolizing contemplation of pessimistic ideas" class="img-fluid author-image" height="400" src="https://replicate.delivery/yhqm/2XfhTVkvApVbVqSaMlcSLzkQObMThHsPI68uNbyIFMzfgMiTA/out-0.png" width="300"/>
+            </div>
+        </div>
+    </div>
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3 class="footer-title" id="about-us-title">About Us</h3>
+                    <p id="about-us-text">We are dedicated to exploring and discussing pessimistic philosophy, providing a platform for deep thinkers and those interested in the darker aspects of existence.</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="footer-title" id="quick-links-title">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link" id="home-link">Home</a></li>
+                        <li><a href="#" class="footer-link" id="articles-link">Articles</a></li>
+                        <li><a href="#" class="footer-link" id="authors-link">Authors</a></li>
+                        <li><a href="#" class="footer-link" id="contact-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="footer-title" id="follow-us-title">Follow Us</h3>
+                    <a href="#" class="footer-link"><i class="fab fa-facebook social-icon"></i></a>
+                    <a href="#" class="footer-link"><i class="fab fa-twitter social-icon"></i></a>
+                    <a href="#" class="footer-link"><i class="fab fa-instagram social-icon"></i></a>
+                    <a href="#" class="footer-link"><i class="fab fa-linkedin social-icon"></i></a>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="footer-title" id="subscribe-title">Subscribe</h3>
+                    <form class="subscribe-form">
+                        <input type="email" class="form-control subscribe-input" placeholder="Enter your email" aria-label="Email for newsletter" required>
+                        <button type="submit" class="btn btn-primary subscribe-btn" id="subscribe-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p id="copyright-text">&copy; 2024 Pessimistic Philosophy. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script crossorigin="anonymous" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function changeLanguage(lang) {
+            const translations = {
+                en: {
+                    "hero-title": "Pessimistic Philosophy",
+                    "hero-subtitle": "Explore the darker side of human existence",
+                    "discover-btn": "Discover More",
+                    "articles-title": "Articles",
+                    "article-1-title": "The Futility of Existence",
+                    "article-1-text": "An exploration of the meaninglessness of life and the absurdity of human endeavors.",
+                    "article-2-title": "Suffering as the Essence of Being",
+                    "article-2-text": "A deep dive into the philosophical concept that pain and suffering are intrinsic to existence.",
+                    "authors-title": "Authors",
+                    "schopenhauer-text": "The father of philosophical pessimism, known for his work \"The World as Will and Representation\".",
+                    "cioran-text": "Romanian philosopher and essayist, famous for his dark, aphoristic meditations on human condition.",
+                    "key-concepts-title": "Key Concepts",
+                    "discussion-title": "Discussion",
+                    "about-us-title": "About Us",
+                    "about-us-text": "We are dedicated to exploring and discussing pessimistic philosophy, providing a platform for deep thinkers and those interested in the darker aspects of existence.",
+                    "quick-links-title": "Quick Links",
+                    "home-link": "Home",
+                    "articles-link": "Articles",
+                    "authors-link": "Authors",
+                    "contact-link": "Contact",
+                    "follow-us-title": "Follow Us",
+                    "subscribe-title": "Subscribe",
+                    "subscribe-btn": "Subscribe",
+                    "copyright-text": "© 2024 Pessimistic Philosophy. All rights reserved."
+                },
+                es: {
+                    "hero-title": "Filosofía Pesimista",
+                    "hero-subtitle": "Explora el lado más oscuro de la existencia humana",
+                    "discover-btn": "Descubrir Más",
+                    "articles-title": "Artículos",
+                    "article-1-title": "La Futilidad de la Existencia",
+                    "article-1-text": "Una exploración de la falta de sentido de la vida y lo absurdo de los esfuerzos humanos.",
+                    "article-2-title": "El Sufrimiento como Esencia del Ser",
+                    "article-2-text": "Una inmersión profunda en el concepto filosófico de que el dolor y el sufrimiento son intrínsecos a la existencia.",
+                    "authors-title": "Autores",
+                    "schopenhauer-text": "El padre del pesimismo filosófico, conocido por su obra \"El mundo como voluntad y representación\".",
+                    "cioran-text": "Filósofo y ensayista rumano, famoso por sus oscuras meditaciones aforísticas sobre la condición humana.",
+                    "key-concepts-title": "Conceptos Clave",
+                    "discussion-title": "Discusión",
+                    "about-us-title": "Sobre Nosotros",
+                    "about-us-text": "Nos dedicamos a explorar y discutir la filosofía pesimista, proporcionando una plataforma para pensadores profundos y aquellos interesados en los aspectos más oscuros de la existencia.",
+                    "quick-links-title": "Enlaces Rápidos",
+                    "home-link": "Inicio",
+
+                    "articles-link": "Artículos",
+                    "authors-link": "Autores",
+                    "contact-link": "Contacto",
+                    "follow-us-title": "Síguenos",
+                    "subscribe-title": "Suscríbete",
+                    "subscribe-btn": "Suscribirse",
+                    "copyright-text": "© 2024 Filosofía Pesimista. Todos los derechos reservados."
+                }
+            };
+
+            Object.keys(translations[lang]).forEach(key => {
+                const element = document.getElementById(key);
+                if (element) {
+                    if (element.tagName === 'BUTTON' || element.tagName === 'INPUT') {
+                        element.innerHTML = translations[lang][key];
+                    } else {
+                        element.innerHTML = translations[lang][key];
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
